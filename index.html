@@ -332,12 +332,12 @@
                     <option value="multiplier">Multiplier (e.g., 2x purchase price)</option>
                 </select>
                 
-                <div id="multiplierSection">
+                <div id="multiplierSection" style="display: none;">
                     <label for="saleMultiplier">Sale Price Multiplier:</label>
                     <input type="number" id="saleMultiplier" value="2" step="0.1" min="1" oninput="calculateAll()">
                 </div>
                 
-                <div id="fixedSection" style="display: none;">
+                <div id="fixedSection">
                     <label for="fixedSalePrice">Fixed Sale Price (USD):</label>
                     <input type="number" id="fixedSalePrice" value="175000" oninput="calculateAll()">
                 </div>
@@ -361,14 +361,14 @@
 
         <div class="calculator-highlight">
             <h2>📊 Your Investment Analysis</h2>
-            <p>Selling for <span id="displaySalePrice">$100,000</span> after <span id="displayMonths">4</span> months</p>
+            <p>Selling for <span id="displaySalePrice">$175,000</span> after <span id="displayMonths">6</span> months</p>
         </div>
 
         <div class="results-section">
             <div class="results-grid">
                 <div class="result-item">
                     <div class="result-label">Initial Investment</div>
-                    <div class="result-value" id="initialInvestment">$64,255</div>
+                    <div class="result-value" id="initialInvestment">$108,255</div>
                 </div>
                 <div class="result-item">
                     <div class="result-label">Monthly Expenses</div>
@@ -376,35 +376,35 @@
                 </div>
                 <div class="result-item">
                     <div class="result-label">Total Monthly Costs</div>
-                    <div class="result-value" id="totalMonthlyCosts">$15,500</div>
+                    <div class="result-value" id="totalMonthlyCosts">$24,300</div>
                 </div>
                 <div class="result-item">
                     <div class="result-label">Total Investment</div>
-                    <div class="result-value" id="totalInvestment">$79,755</div>
+                    <div class="result-value" id="totalInvestment">$132,555</div>
                 </div>
                 <div class="result-item">
                     <div class="result-label">Gross Sale Price</div>
-                    <div class="result-value" id="grossSalePrice">$100,000</div>
+                    <div class="result-value" id="grossSalePrice">$175,000</div>
                 </div>
                 <div class="result-item">
                     <div class="result-label">Seller Commission</div>
-                    <div class="result-value" id="saleCommissionAmount">$10,000</div>
+                    <div class="result-value" id="saleCommissionAmount">$17,500</div>
                 </div>
                 <div class="result-item">
                     <div class="result-label">Net Sale Proceeds</div>
-                    <div class="result-value" id="netSaleProceeds">$90,000</div>
+                    <div class="result-value" id="netSaleProceeds">$157,500</div>
                 </div>
                 <div class="result-item">
                     <div class="result-label">Total Profit/Loss</div>
-                    <div class="result-value" id="totalProfit">$10,245</div>
+                    <div class="result-value" id="totalProfit">$24,945</div>
                 </div>
                 <div class="result-item">
                     <div class="result-label">ROI %</div>
-                    <div class="result-value" id="roiPercent">12.8%</div>
+                    <div class="result-value" id="roiPercent">18.8%</div>
                 </div>
                 <div class="result-item">
                     <div class="result-label">Annualized ROI</div>
-                    <div class="result-value" id="annualizedROI">38.5%</div>
+                    <div class="result-value" id="annualizedROI">37.7%</div>
                 </div>
             </div>
         </div>
@@ -449,7 +449,7 @@
             <h3>🔍 Key Requirements & Information</h3>
             
             <div class="important-info">
-                <strong>USMCA Certification Benefits:</strong> Using USMCA certification saves 25% tariff. On a $50k horse, this saves $12,500+ making the difference between profit and loss.
+                <strong>USMCA Certification Benefits:</strong> Using USMCA certification saves 25% tariff. On a $90k horse, this saves $22,500+ making the difference between profit and loss.
             </div>
             
             <h4>Required Documentation:</h4>
