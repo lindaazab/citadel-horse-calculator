@@ -610,10 +610,28 @@
                 let monthCosts = monthlyExpenses;
                 let extras = '';
                 
-                // Shoeing upon arrival (month 1) then every 6 weeks (1.5 months) after that
-                if (month === 1 || (month - 1) % 1.5 === 0) {
+                // Shoeing schedule every 6 weeks (1.5 months):
+                // Month 1: Upon arrival
+                // Month 2.5: 6 weeks later (mid-month 2) 
+                // Month 4: 6 weeks later (end of month 3)
+                // Month 5.5: 6 weeks later (mid-month 5)
+                let shoeingNote = '';
+                if (month === 1) {
                     monthCosts += shoeingCost;
-                    extras = `<br><small style="color: #7b1e1e;">+ Shoeing: ${formatCurrency(shoeingCost)}</small>`;
+                    shoeingNote = ' (upon arrival)';
+                } else if (month === 2) {
+                    monthCosts += shoeingCost;
+                    shoeingNote = ' (week 2)';
+                } else if (month === 4) {
+                    monthCosts += shoeingCost;
+                    shoeingNote = ' (6 weeks from last)';
+                } else if (month === 5) {
+                    monthCosts += shoeingCost;
+                    shoeingNote = ' (week 2)';
+                }
+                
+                if (shoeingNote) {
+                    extras = `<br><small style="color: #7b1e1e;">+ Shoeing: ${formatCurrency(shoeingCost)}${shoeingNote}</small>`;
                 }
 
                 monthDiv.innerHTML = `
